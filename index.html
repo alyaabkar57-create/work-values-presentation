@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="عرض تقديمي تفاعلي عن سلوكيات وقيم العمل في بيئة العمل الحديثة">
+<title>سلوكيات وقيم العمل</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- مكتبة الأيقونات -->
+<svg class="svg-sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.7c0 4.7 3.1 8 7.5 9.3 4.4-1.3 7.5-4.6 7.5-9.3V6L12 3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c0-3.8 3.2-6.5 7.5-6.5s7.5 2.7 7.5 6.5"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.8"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.2V12l3.3 2"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.6 5.9a5 5 0 0 0-7.1 0L12 7.4l-1.5-1.5a5 5 0 0 0-7.1 7.1L12 21.5l8.6-8.5a5 5 0 0 0 0-7.1Z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3.2"/><path d="M3.5 20c0-3 2.5-5.2 5.5-5.2s5.5 2.2 5.5 5.2"/><path d="M16 5.8a3.2 3.2 0 0 1 0 6.1M17.5 14.9c2 .7 3.4 2.6 3.4 5.1"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9L6.6 19.8l1-6.1L3.2 9.4l6.1-.9L12 3Z"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4v16M7.5 20h9M4.5 8h15M4.5 8 2 13.5h5L4.5 8Zm15 0-2.5 5.5h5L19.5 8Z"/></symbol>
+  <symbol id="i-message" viewBox="0 0 24 24"><path d="M20.5 14.5a3 3 0 0 1-3 3H9.5L4 20.5V6a3 3 0 0 1 3-3h10.5a3 3 0 0 1 3 3v8.5Z"/><path d="M8 9h8M8 12.5h5"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9.2 18h5.6M10.2 21h3.6M8.3 14.6a5.6 5.6 0 1 1 7.4 0c-.9.8-1.7 1.7-1.7 2.9h-4c0-1.2-.8-2.1-1.7-2.9Z"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.8" y="10.5" width="14.4" height="10" rx="2.4"/><path d="M8 10.5V7.8a4 4 0 0 1 8 0v2.7"/><path d="M12 14.5v2.5"/></symbol>
+  <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7.5" ry="3"/><path d="M4.5 6v12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3V6M4.5 12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3"/></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2.5"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.4 4.3 2.7 17.5a2 2 0 0 0 1.7 3h15.2a2 2 0 0 0 1.7-3L13.6 4.3a2 2 0 0 0-3.2 0Z"/><path d="M12 9v4.5M12 17h.01"/></symbol>
+  <symbol id="i-user-x" viewBox="0 0 24 24"><circle cx="10" cy="8" r="3.5"/><path d="M3.5 20c0-3.2 2.9-5.5 6.5-5.5 1.2 0 2.3.3 3.2.7M16 15l5 5M21 15l-5 5"/></symbol>
+  <symbol id="i-chat-off" viewBox="0 0 24 24"><path d="M20.5 14.5a3 3 0 0 1-3 3H9.5L4 20.5V6a3 3 0 0 1 3-3h10.5a3 3 0 0 1 3 3v8.5Z"/><path d="M3 3l18 18"/></symbol>
+  <symbol id="i-thumb-down" viewBox="0 0 24 24"><path d="M7 10v9H4a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h3ZM7 10l4.2-6.3a1.7 1.7 0 0 1 3 .8V9h4.6a2 2 0 0 1 2 2.4l-1.4 6.2a2 2 0 0 1-2 1.5H7"/></symbol>
+  <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M3 3l18 18M10.6 5.3A9.6 9.6 0 0 1 12 5.2c5 0 9 4.5 9 6.8 0 1-.8 2.5-2.1 3.7M6.3 7.5C4 9 3 10.8 3 12c0 2.3 4 6.8 9 6.8 1.2 0 2.3-.3 3.3-.7"/><path d="M9.8 9.9a3 3 0 0 0 4.3 4.3"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.3 4.3L19.5 6.5"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3.5h10V9M7 18H5a2 2 0 0 1-2-2v-4.5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2V16a2 2 0 0 1-2 2h-2"/><rect x="7" y="14" width="10" height="6.5" rx="1"/><path d="M17.5 11.5h.01"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1.6"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.6"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.6"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.6"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-quote" viewBox="0 0 24 24"><path d="M9.5 6.5C6.5 8 5 10.2 5 13.3V18h5.5v-5.5H8c0-1.7.7-2.9 2.2-3.8l-.7-2.2Zm9 0C15.5 8 14 10.2 14 13.3V18h5.5v-5.5H17c0-1.7.7-2.9 2.2-3.8l-.7-2.2Z"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 2.8 13.9 9l6.2 1.9-6.2 2-1.9 6.2-2-6.2L3.9 11 10 9l2-6.2ZM19 17.5l.7 2.3 2.3.7-2.3.7-.7 2.3-.7-2.3-2.3-.7 2.3-.7.7-2.3Z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 6.5C9.8 4.9 7 4.3 3.5 4.5v13c3.5-.2 6.3.4 8.5 2 2.2-1.6 5-2.2 8.5-2v-13c-3.5-.2-6.3.4-8.5 2Z"/><path d="M12 6.5v13"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.7"/><path d="m14.8 9.2-1.6 4-4 1.6 1.6-4 4-1.6Z"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-13.8-5L4 8.2M4 4.5v4h4M4 13a8 8 0 0 0 13.8 5L20 15.8M20 19.5v-4h-4"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="15" rx="2.2"/><path d="M7.5 3.5v4M16.5 3.5v4M3.5 10.5h17M8 14.5h3M8 17.5h7"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20h16M7.5 20v-6M12 20V9M16.5 20v-9.5M20.5 20V5"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 4c-8.5 0-14 3.5-14 10a5.5 5.5 0 0 0 5.5 5.5C18 19.5 20 12 20 4Z"/><path d="M4 21c2.5-5 6-8.5 11-11"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8.5 12V5.5a1.6 1.6 0 0 1 3.2 0V11m0-1.5a1.6 1.6 0 0 1 3.2 0V12m0-1a1.6 1.6 0 0 1 3.2 0v4.2c0 3.3-2.4 5.8-5.7 5.8h-1.6c-2 0-3.3-.8-4.4-2.4L4 14.8a1.7 1.7 0 0 1 2.7-2l1.8 2"/></symbol>
+</svg>
+
+<div class="deck" id="deck">
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark"><svg><use href="#i-sparkle"/></svg></span>
+      <span class="brand-text"><strong>قِــم</strong><small>سلوكيات وقيم العمل</small></span>
+    </div>
+    <div class="topbar-meta"><span class="dot"></span><span id="sectionName">الغلاف</span></div>
+  </header>
+
+  <main class="slides" id="slides">
+
+    <!-- 1. الغلاف -->
+    <section class="slide slide--cover is-active" data-title="الغلاف" data-section="الغلاف">
+      <div class="blob blob--1"></div><div class="blob blob--2"></div>
+      <div class="slide-inner cover-grid">
+        <div class="cover-copy">
+          <span class="badge reveal"><svg><use href="#i-sparkle"/></svg> عرض تفاعلي · 12 شريحة</span>
+          <h1 class="reveal" style="--d:.08s">سلوكيات<br><span class="grad-text">وقيم العمل</span></h1>
+          <p class="lead reveal" style="--d:.16s">البوصلة التي تُحوّل الكفاءة إلى ثقة، والفريق إلى قوة لا تُقهر.</p>
+          <div class="chips reveal" style="--d:.24s">
+            <span>أخلاق مهنية</span><span>ثقافة مؤسسية</span><span>تميز يومي</span>
+          </div>
+          <div class="cover-actions reveal" style="--d:.3s">
+            <button class="btn btn--primary" data-go="1">ابدأ العرض <svg><use href="#i-arrow-left"/></svg></button>
+            <span class="micro">استخدم أسهم لوحة المفاتيح للتنقل</span>
+          </div>
+        </div>
+        <div class="cover-visual reveal" style="--d:.2s">
+          <div class="photo photo--cover">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" alt="فريق يعمل معاً في بيئة مكتبية حديثة" loading="eager">
+          </div>
+          <div class="float-card float-card--a"><span class="float-icon mint"><svg><use href="#i-check"/></svg></span><div><strong>ثقة</strong><small>تبنى بالأفعال</small></div></div>
+          <div class="float-card float-card--b"><span class="float-icon orange"><svg><use href="#i-star"/></svg></span><div><strong>إتقان</strong><small>عادة يومية</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. مقدمة -->
+    <section class="slide" data-title="مقدمة" data-section="التمهيد">
+      <div class="slide-inner">
+        <header class="slide-head reveal">
+          <span class="kicker">01 / التمهيد</span>
+          <h2>لماذا نتحدث عنها الآن؟</h2>
+          <p class="sub">لأن طريقة عملنا تغيّرت، لكن الحاجة إلى الثقة بقيت كما هي.</p>
+        </header>
+        <div class="intro-grid">
+          <div class="card card--definition reveal" style="--d:.1s">
+            <span class="icon-tile blue"><svg><use href="#i-book"/></svg></span>
+            <h3>تعريف مبسّط</h3>
+            <p class="definition">القيم هي المبادئ التي نؤمن بها، والسلوكيات هي ترجمتها إلى أفعال نراها كل يوم في المكتب.</p>
+            <div class="definition-line"></div>
+            <p class="small-note">ما نفعله حين لا يرانا أحد، هو ما يعرّفنا حقاً.</p>
+          </div>
+          <div class="stack reveal" style="--d:.18s">
+            <div class="point"><span class="num">1</span><div><h3>بيئة عمل تغيّرت</h3><p>عمل عن بُعد، فرق متنوعة، وتواصل لحظي يُسرّع وتيرة القرار.</p></div></div>
+            <div class="point"><span class="num">2</span><div><h3>الثقة عملة النجاح</h3><p>تُبنى بإجراءات صغيرة متكررة، وتُهدم بسهولة أكبر مما نتخيل.</p></div></div>
+            <div class="point"><span class="num">3</span><div><h3>المعايير ارتفعت</h3><p>المؤسسات تُقاس اليوم بطريقة تعاملها مع الناس قبل نتائجها.</p></div></div>
+          </div>
+        </div>
+        <div class="formula reveal" style="--d:.28s">
+          <span>قيم واضحة</span><b>+</b><span>سلوك صادق</span><b>=</b><strong>فريق يُعتمد عليه</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. مفهوم قيم العمل -->
+    <section class="slide" data-title="مفهوم قيم العمل" data-section="المفهوم">
+      <div class="slide-inner">
+        <header class="slide-head reveal">
+          <span class="kicker">02 / المفهوم</span>
+          <h2>ما المقصود بقيم العمل؟</h2>
+          <p class="sub">مبادئ تُوجّه القرار، وتُشكّل الشخصية، وتصنع ثقافة المؤسسة.</p>
+        </header>
+        <div class="concept-banner reveal" style="--d:.08s">
+          <svg class="banner-icon"><use href="#i-compass"/></svg>
+          <p>هي المبادئ الأخلاقية والمهنية التي تُوجّه قراراتنا وتصرّفاتنا داخل العمل، وتُشكّل شخصية الموظف وثقافة المؤسسة معاً.</p>
+        </div>
+        <div class="impact-two">
+          <div class="card card--mint reveal" style="--d:.16s">
+            <span class="icon-tile mint"><svg><use href="#i-user"/></svg></span>
+            <h3>أثرها على الموظف</h3>
+            <p>ترشد قرارك حين لا يوجد من يراقبك، وتمنحك احتراماً داخلياً قبل تقدير الآخرين لك.</p>
+          </div>
+          <div class="card card--blue reveal" style="--d:.22s">
+            <span class="icon-tile blue"><svg><use href="#i-chart"/></svg></span>
+            <h3>أثرها على المؤسسة</h3>
+            <p>تتحوّل إلى سمعة تجذب المواهب، وتقلّل النزاعات، وترفع ولاء العملاء والشركاء.</p>
+          </div>
+        </div>
+        <div class="flow reveal" style="--d:.3s" aria-label="سلسلة أثر القيم">
+          <span>قيمة</span><i>←</i><span>قرار</span><i>←</i><span>سلوك</span><i>←</i><span>ثقة</span><i>←</i><strong>تميّز</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. أهم قيم العمل -->
+    <section class="slide" data-title="أهم قيم العمل" data-section="القيم">
+      <div class="slide-inner">
+        <header class="slide-head slide-head--compact reveal">
+          <span class="kicker">03 / القيم الأساسية</span>
+          <h2>سبع قيم تصنع الفرق</h2>
+          <p class="sub">ليست شعارات على الورق، بل خيارات صغيرة تتكرر كل يوم.</p>
+        </header>
+        <div class="values-grid">
+          <div class="value-card v-blue reveal" style="--d:.06s"><span class="icon-tile"><svg><use href="#i-shield"/></svg></span><h3>الأمانة</h3><p>الصدق في القول والفعل، حتى حين لا يراقبك أحد.</p></div>
+          <div class="value-card v-mint reveal" style="--d:.1s"><span class="icon-tile"><svg><use href="#i-target"/></svg></span><h3>المسؤولية</h3><p>أن تملك نتيجة عملك، لا أن تبرّر تأخيره.</p></div>
+          <div class="value-card v-orange reveal" style="--d:.14s"><span class="icon-tile"><svg><use href="#i-clock"/></svg></span><h3>الالتزام</h3><p>الوفاء بالوعود واحترام المواعيد والمهل.</p></div>
+          <div class="value-card v-pink reveal" style="--d:.18s"><span class="icon-tile"><svg><use href="#i-heart"/></svg></span><h3>الاحترام</h3><p>تقدير كل شخص مهما اختلف دوره أو رأيه.</p></div>
+          <div class="value-card v-sky reveal" style="--d:.22s"><span class="icon-tile"><svg><use href="#i-users"/></svg></span><h3>التعاون</h3><p>نجاح الفريق أهم من إبراز الذات.</p></div>
+          <div class="value-card v-purple reveal" style="--d:.26s"><span class="icon-tile"><svg><use href="#i-star"/></svg></span><h3>الإتقان</h3><p>أن تُتقن عملك وتسعى لتحسينه باستمرار.</p></div>
+          <div class="value-card value-card--wide v-wide reveal" style="--d:.3s">
+            <span class="icon-tile"><svg><use href="#i-scale"/></svg></span>
+            <div><h3>العدالة</h3><p>معاملة الجميع بمعيار واحد، وبدون محاباة أو تحيّز.</p></div>
+            <span class="wide-badge">ميزان الثقافة</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. السلوكيات الإيجابية -->
+    <section class="slide" data-title="السلوكيات الإيجابية" data-section="السلوكيات">
+      <div class="slide-inner split">
+        <div class="split-copy">
+          <header class="slide-head reveal">
+            <span class="kicker">04 / الممارسة اليومية</span>
+            <h2>سلوكيات تصنع بيئة أفضل</h2>
+            <p class="sub">ست عادات بسيطة تُمارَس بلا ضجيج، ويلمس أثرها الجميع.</p>
+          </header>
+          <div class="mini-grid">
+            <div class="mini-item reveal" style="--d:.08s"><span class="mini-icon mint"><svg><use href="#i-clock"/></svg></span><div><h3>احترام الوقت</h3><p>الحضور في الموعد، واحترام مدة الاجتماعات.</p></div></div>
+            <div class="mini-item reveal" style="--d:.12s"><span class="mini-icon blue"><svg><use href="#i-message"/></svg></span><div><h3>التواصل الفعال</h3><p>إصغاء جيد، ورسائل واضحة وفي وقتها.</p></div></div>
+            <div class="mini-item reveal" style="--d:.16s"><span class="mini-icon orange"><svg><use href="#i-refresh"/></svg></span><div><h3>تقبّل النقد</h3><p>اعتباره فرصة تحسين لا هجوماً شخصياً.</p></div></div>
+            <div class="mini-item reveal" style="--d:.2s"><span class="mini-icon purple"><svg><use href="#i-bulb"/></svg></span><div><h3>المبادرة</h3><p>اقتراح الحلول قبل أن تُطلب منك.</p></div></div>
+            <div class="mini-item reveal" style="--d:.24s"><span class="mini-icon sky"><svg><use href="#i-users"/></svg></span><div><h3>العمل الجماعي</h3><p>مشاركة المعرفة ودعم الزملاء وقت الحاجة.</p></div></div>
+            <div class="mini-item reveal" style="--d:.28s"><span class="mini-icon pink"><svg><use href="#i-lock"/></svg></span><div><h3>حفظ الأسرار</h3><p>الثقة تُبنى أيضاً بما لا تقوله.</p></div></div>
+          </div>
+        </div>
+        <div class="split-visual reveal" style="--d:.2s">
+          <div class="photo photo--tall">
+            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=80" alt="فريق يتعاون ويتبادل الأفكار حول طاولة العمل" loading="eager">
+          </div>
+          <div class="photo-caption"><svg><use href="#i-heart"/></svg> التعاون لغة النجاح المشترك</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. السلوكيات السلبية -->
+    <section class="slide" data-title="السلوكيات السلبية" data-section="السلوكيات">
+      <div class="slide-inner">
+        <header class="slide-head reveal">
+          <span class="kicker">05 / ما يجب تجنّبه</span>
+          <h2>السلوكيات السلبية وأثرها</h2>
+          <p class="sub">لا نذكرها لنُدين، بل لنعرف أين تبدأ المشكلة وكيف نمنعها.</p>
+        </header>
+        <div class="negative-grid">
+          <div class="neg-card reveal" style="--d:.06s"><span class="neg-icon"><svg><use href="#i-clock"/></svg></span><h3>التأخّر</h3><p>يُضيع وقت الجميع ويهدد التزام الفريق.</p><span class="impact">الأثر: تراجع الثقة</span></div>
+          <div class="neg-card reveal" style="--d:.1s"><span class="neg-icon"><svg><use href="#i-user-x"/></svg></span><h3>التهرّب من المسؤولية</h3><p>ينشر العزوف ويُحمّل الآخرين أخطاءنا.</p><span class="impact">الأثر: ثقافة لوم</span></div>
+          <div class="neg-card reveal" style="--d:.14s"><span class="neg-icon"><svg><use href="#i-chat-off"/></svg></span><h3>ضعف التواصل</h3><p>يولّد سوء الفهم والأخطاء المتكررة.</p><span class="impact">الأثر: هدر الجهد</span></div>
+          <div class="neg-card reveal" style="--d:.18s"><span class="neg-icon"><svg><use href="#i-thumb-down"/></svg></span><h3>عدم احترام الآخرين</h3><p>يقتل روح التعاون ويرفع مستوى التوتر.</p><span class="impact">الأثر: بيئة منفرة</span></div>
+          <div class="neg-card reveal" style="--d:.22s"><span class="neg-icon"><svg><use href="#i-alert"/></svg></span><h3>الإهمال</h3><p>يخفض الجودة ويُكلف المؤسسة سمعتها.</p><span class="impact">الأثر: خسارة العميل</span></div>
+        </div>
+        <div class="note-strip reveal" style="--d:.28s"><svg><use href="#i-leaf"/></svg> التصحيح يبدأ بملاحظة السلوك، لا بجرح صاحبه.</div>
+      </div>
+    </section>
+
+    <!-- 7. الأهمية -->
+    <section class="slide" data-title="أهمية القيم والسلوكيات" data-section="الأثر">
+      <div class="slide-inner">
+        <header class="slide-head slide-head--center reveal">
+          <span class="kicker">06 / الأثر</span>
+          <h2>أثر يمتد إلى أربعة مستويات</h2>
+          <p class="sub">كل سلوك صغير يصل في النهاية إلى جودة العمل نفسه.</p>
+        </header>
+        <div class="diagram">
+          <div class="satellite s-1 reveal" style="--d:.08s"><span class="icon-tile"><svg><use href="#i-user"/></svg></span><div><h3>الفرد</h3><p>راحة نفسية وسمعة مهنية تفتح أبواباً جديدة.</p></div></div>
+          <div class="satellite s-2 reveal" style="--d:.14s"><span class="icon-tile"><svg><use href="#i-users"/></svg></span><div><h3>فريق العمل</h3><p>ثقة أسرع، خلافات أقل، وإنجاز أكبر.</p></div></div>
+          <div class="hub reveal" style="--d:.1s"><svg><use href="#i-sparkle"/></svg><strong>القيم<br>في العمل</strong><span>المركز الذي تدور حوله كل النتائج</span></div>
+          <div class="satellite s-3 reveal" style="--d:.2s"><span class="icon-tile"><svg><use href="#i-chart"/></svg></span><div><h3>المؤسسة</h3><p>ولاء العملاء وسمعة تجذب أفضل المواهب.</p></div></div>
+          <div class="satellite s-4 reveal" style="--d:.26s"><span class="icon-tile"><svg><use href="#i-target"/></svg></span><div><h3>جودة الإنتاجية</h3><p>أخطاء أقل، قرارات أسرع، ونتائج أثبت.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. أخلاقيات العمل في العصر الرقمي -->
+    <section class="slide" data-title="أخلاقيات العصر الرقمي" data-section="الرقمية">
+      <div class="slide-inner split split--reverse">
+        <div class="split-copy">
+          <header class="slide-head reveal">
+            <span class="kicker">07 / العصر الرقمي</span>
+            <h2>الأخلاق تنتقل معنا إلى الشاشة</h2>
+            <p class="sub">الرقمية ليست استثناءً من القيم، بل اختبار جديد لها.</p>
+          </header>
+          <div class="mini-grid mini-grid--two">
+            <div class="mini-item reveal" style="--d:.08s"><span class="mini-icon blue"><svg><use href="#i-lock"/></svg></span><div><h3>احترام الخصوصية</h3><p>لا تشارك معلومات خاصة دون إذن صاحبها.</p></div></div>
+            <div class="mini-item reveal" style="--d:.12s"><span class="mini-icon mint"><svg><use href="#i-database"/></svg></span><div><h3>حماية البيانات</h3><p>كلمات مرور قوية، وتخزين آمن، ووصول محدود.</p></div></div>
+            <div class="mini-item reveal" style="--d:.16s"><span class="mini-icon orange"><svg><use href="#i-chip"/></svg></span><div><h3>استخدام مسؤول للتقنية</h3><p>الأدوات لخدمة العمل لا لتشتيت الانتباه.</p></div></div>
+            <div class="mini-item reveal" style="--d:.2s"><span class="mini-icon purple"><svg><use href="#i-eye-off"/></svg></span><div><h3>أمانة الذكاء الاصطناعي</h3><p>راجع مخرجاته، وانسب المصادر، ولا تُدخل بيانات حساسة.</p></div></div>
+          </div>
+        </div>
+        <div class="split-visual reveal" style="--d:.18s">
+          <div class="photo photo--tall">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=80" alt="فريق يستخدم الحواسيب والتقنية في عمله اليومي" loading="eager">
+          </div>
+          <div class="photo-caption"><svg><use href="#i-shield"/></svg> الثقة الرقمية مسؤولية الجميع</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. مواقف من بيئة العمل -->
+    <section class="slide" data-title="مواقف من بيئة العمل" data-section="تطبيقات عملية">
+      <div class="slide-inner">
+        <header class="slide-head slide-head--center reveal">
+          <span class="kicker">08 / تطبيقات عملية</span>
+          <h2>ماذا تفعل في هذه المواقف؟</h2>
+          <p class="sub">اضغط على كل بطاقة لتكتشف السلوك الأفضل — ابدأ بعرض الإجابة.</p>
+        </header>
+        <div class="scenarios">
+          <article class="scenario reveal" style="--d:.08s">
+            <span class="sc-no">01</span><span class="sc-icon"><svg><use href="#i-calendar"/></svg></span>
+            <h3>الموقف الأول</h3>
+            <p class="sc-q">تأخّرت عن اجتماع الفريق بسبب ظرف طارئ.</p>
+            <button class="sc-toggle" type="button" aria-expanded="false">عرض السلوك الصحيح <svg><use href="#i-arrow-left"/></svg></button>
+            <div class="sc-answer"><span class="sc-answer-label"><svg><use href="#i-check"/></svg> السلوك الصحيح</span><p>أُبلغ الفريق قبل الموعد بوقت كافٍ، وأعتذر باختصار، وأقترح موعداً تعويضياً.</p></div>
+          </article>
+          <article class="scenario reveal" style="--d:.16s">
+            <span class="sc-no">02</span><span class="sc-icon"><svg><use href="#i-message"/></svg></span>
+            <h3>الموقف الثاني</h3>
+            <p class="sc-q">اكتشفت خطأً في عمل زميل كان يمكن تجنّبه.</p>
+            <button class="sc-toggle" type="button" aria-expanded="false">عرض السلوك الصحيح <svg><use href="#i-arrow-left"/></svg></button>
+            <div class="sc-answer"><span class="sc-answer-label"><svg><use href="#i-check"/></svg> السلوك الصحيح</span><p>أكلّمه مباشرةً بأسلوب محترم، وأساعده في التصحيح، ولا أتحدث عنه أمام الآخرين.</p></div>
+          </article>
+          <article class="scenario reveal" style="--d:.24s">
+            <span class="sc-no">03</span><span class="sc-icon"><svg><use href="#i-lock"/></svg></span>
+            <h3>الموقف الثالث</h3>
+            <p class="sc-q">طلب عميل معلومة سرية عن مشروع لم يُعلن بعد.</p>
+            <button class="sc-toggle" type="button" aria-expanded="false">عرض السلوك الصحيح <svg><use href="#i-arrow-left"/></svg></button>
+            <div class="sc-answer"><span class="sc-answer-label"><svg><use href="#i-check"/></svg> السلوك الصحيح</span><p>أرفض بأدب، أوضّح أن المعلومة غير متاحة، وأوجّهه إلى القناة الرسمية.</p></div>
+          </article>
+        </div>
+        <p class="scenario-foot reveal" style="--d:.3s">السلوك الصحيح ليس دائماً الأسهل، لكنه دائماً الأكثر احتراماً.</p>
+      </div>
+    </section>
+
+    <!-- 10. كيف نطور سلوكياتنا -->
+    <section class="slide" data-title="كيف نطور سلوكياتنا" data-section="التطوير">
+      <div class="slide-inner">
+        <header class="slide-head reveal">
+          <span class="kicker">09 / خطوات عملية</span>
+          <h2>كيف نبني شخصية مهنية ناجحة؟</h2>
+          <p class="sub">التطوير ليس دورة تدريبية واحدة، بل مسار تتكرر خطواته.</p>
+        </header>
+        <div class="steps">
+          <div class="step reveal" style="--d:.06s"><span class="step-no">1</span><span class="step-icon"><svg><use href="#i-sparkle"/></svg></span><h3>ابدأ بنفسك</h3><p>كن قدوةً قبل أن تطلب من غيرك التغيير.</p></div>
+          <div class="step reveal" style="--d:.1s"><span class="step-no">2</span><span class="step-icon"><svg><use href="#i-book"/></svg></span><h3>اكتب قيمك</h3><p>اختر خمس قيم وراجعها مع نفسك أسبوعياً.</p></div>
+          <div class="step reveal" style="--d:.14s"><span class="step-no">3</span><span class="step-icon"><svg><use href="#i-message"/></svg></span><h3>اطلب ملاحظات</h3><p>اسأل زملاءك بوصف صادق عن سلوكك.</p></div>
+          <div class="step reveal" style="--d:.18s"><span class="step-no">4</span><span class="step-icon"><svg><use href="#i-eye-off"/></svg></span><h3>توقّف قبل الإرسال</h3><p>هل رسالتك واضحة ومحترمة؟ إن شككت، أعِد الصياغة.</p></div>
+          <div class="step reveal" style="--d:.22s"><span class="step-no">5</span><span class="step-icon"><svg><use href="#i-refresh"/></svg></span><h3>اعتذر وصحّح</h3><p>الاعتذار السريع يتبعه فعل إصلاحي، لا كلام فقط.</p></div>
+          <div class="step reveal" style="--d:.26s"><span class="step-no">6</span><span class="step-icon"><svg><use href="#i-heart"/></svg></span><h3>شارك الإيجابي</h3><p>امدح سلوكيات الآخرين واجعلها قدوة للفريق.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. الخلاصة -->
+    <section class="slide slide--summary" data-title="الخلاصة" data-section="الخلاصة">
+      <div class="blob blob--3"></div>
+      <div class="slide-inner">
+        <header class="slide-head reveal">
+          <span class="kicker">10 / الخلاصة</span>
+          <h2>ثلاث أفكار نأخذها معنا</h2>
+        </header>
+        <div class="takeaways">
+          <div class="takeaway reveal" style="--d:.08s"><span>01</span><p>القيم تُترجم إلى أفعال صغيرة تتكرر كل يوم.</p></div>
+          <div class="takeaway reveal" style="--d:.14s"><span>02</span><p>السلوك الجيد عادة تُبنى بالتكرار، لا بالنيّة وحدها.</p></div>
+          <div class="takeaway reveal" style="--d:.2s"><span>03</span><p>الثقة هي النتيجة الحقيقية لأي التزام مهني.</p></div>
+        </div>
+        <div class="quote-card reveal" style="--d:.28s">
+          <svg class="quote-icon"><use href="#i-quote"/></svg>
+          <blockquote>«القيم لا تُعلَّق على الجدران، بل تُمارَس في كل تفصيلة من يوم عملنا.»</blockquote>
+          <div class="quote-line"></div>
+          <span class="quote-by">خلاصة العرض</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. شريحة ختامية -->
+    <section class="slide slide--thanks" data-title="شكراً لحسن استماعكم" data-section="الختام">
+      <div class="blob blob--4"></div><div class="blob blob--5"></div>
+      <div class="slide-inner thanks-inner">
+        <div class="thanks-photo reveal" style="--d:.06s">
+          <div class="photo"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80" alt="بيئة عمل مشرقة وعصرية" loading="eager"></div>
+        </div>
+        <span class="badge badge--light reveal" style="--d:.1s"><svg><use href="#i-heart"/></svg> نهاية العرض</span>
+        <h2 class="reveal" style="--d:.16s">شكرًا لحسن استماعكم</h2>
+        <p class="thanks-lead reveal" style="--d:.22s">نتمنى لكم يوم عمل مليئاً بالثقة والإتقان.</p>
+        <div class="thanks-chip reveal" style="--d:.28s"><svg><use href="#i-message"/></svg> هل لديكم أسئلة؟</div>
+        <button class="btn btn--ghost reveal" style="--d:.34s" data-go="0"><svg><use href="#i-refresh"/></svg> العودة إلى البداية</button>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="progress" aria-hidden="true"><span id="progressFill"></span></div>
+
+  <nav class="nav" aria-label="تنقل الشرائح">
+    <button class="nav-btn" id="prevBtn" type="button" aria-label="الشريحة السابقة"><svg><use href="#i-arrow-right"/></svg><span>السابق</span></button>
+    <div class="counter"><strong id="currentSlide">01</strong><span>/</span><span id="totalSlides">12</span></div>
+    <button class="nav-btn nav-btn--next" id="nextBtn" type="button" aria-label="الشريحة التالية"><span>التالي</span><svg><use href="#i-arrow-left"/></svg></button>
+  </nav>
+
+  <div class="tools">
+    <button class="tool-btn" id="overviewBtn" type="button" title="قائمة الشرائح" aria-label="قائمة الشرائح"><svg><use href="#i-grid"/></svg></button>
+    <button class="tool-btn" id="fullscreenBtn" type="button" title="ملء الشاشة" aria-label="ملء الشاشة"><svg><use href="#i-expand"/></svg></button>
+    <button class="tool-btn" id="printBtn" type="button" title="طباعة أو حفظ PDF" aria-label="طباعة أو حفظ PDF"><svg><use href="#i-print"/></svg></button>
+  </div>
+
+  <div class="hint" id="hint" role="status">استخدم ← للتالي و→ للسابق</div>
+
+  <div class="overview" id="overview" hidden>
+    <div class="overview-backdrop" data-close-overview></div>
+    <aside class="overview-panel" aria-label="قائمة الشرائح">
+      <div class="overview-head"><div><span class="kicker">دليل سريع</span><h3>قائمة الشرائح</h3></div><button class="tool-btn" type="button" data-close-overview aria-label="إغلاق"><svg><use href="#i-close"/></svg></button></div>
+      <ol class="overview-list" id="overviewList"></ol>
+      <p class="overview-tip">اختصارات: ← التالي · → السابق · مسافة · Home / End</p>
+    </aside>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

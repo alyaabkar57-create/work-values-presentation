@@ -30,18 +30,25 @@ npx serve .
 
 كما تتوفر أزرار التنقل وقائمة الشرائح أسفل الشاشة، وتفاعل بطاقات "مواقف من بيئة العمل" بالضغط عليها.
 
+## النشر الحي
+
+النسخة المنشورة: https://work-values-presentation.studiowebs.workers.dev
+
 ## النشر على Cloudflare Pages
 
-المستودع خاص، لذا يُنصح بالنشر برمجياً عبر Wrangler (لا يحتاج صلاحية GitHub App):
+المستودع خاص، لذا تم النشر برمجياً عبر Wrangler (لا يحتاج صلاحية GitHub App). المشروع يعمل على أحدث إصدار من Cloudflare Pages المدمج مع Cloudflare Workers.
+
+لإعادة النشر بعد أي تعديل:
 
 ```bash
-npm install -g wrangler
-wrangler login
-wrangler pages deploy . --project-name work-values-presentation
+npx wrangler login      # مرة واحدة فقط
+npx wrangler deploy
 ```
 
+ملف `wrangler.jsonc` يضبط اسم المشروع ومجلد الأصول، و`.assetsignore` يستبعد ملفات الإعداد من الرفع.
+
 أو من لوحة Cloudflare:
-**Workers & Pages → Create → Pages → Connect to Git → GitHub → اختر المستودع → Deploy**
-(قد يتطلب تثبيت تطبيق Cloudflare على المستودع الخاص).
+**Workers & Pages → اختر المشروع work-values-presentation → Deploy**
+(ربط المستودع الخاص يتطلب تثبيت تطبيق Cloudflare GitHub).
 
 > الخطوط من Google Fonts والصور من Unsplash، لذا يفضّل الاتصال بالإنترنت عند عرض الشرائح.
